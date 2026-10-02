@@ -10,7 +10,9 @@ added on top.
 ## What it does
 
 - **`todo` tool** — the agent manages a list with `list`, `add` (text),
-  `toggle` (id), and `clear`.
+  `toggle` (id), and `clear`. The tool declares a `promptSnippet` (so it appears
+  under "Available tools") and `promptGuidelines` (so the agent knows when and
+  why to reach for it), which is what makes the agent use it unprompted.
 - **`/todos` command** — an interactive viewer for the todos on the current
   branch. Escape or Ctrl+C closes it.
 - **Footer status line** — appears only while the list is non-empty *and*

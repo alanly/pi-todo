@@ -6,6 +6,8 @@ import { registerTodoTool } from "../src/tools.ts";
 interface CapturedTool {
 	name: string;
 	executionMode?: string;
+	promptSnippet?: string;
+	promptGuidelines?: string[];
 	execute: (
 		toolCallId: string,
 		params: Record<string, unknown>,
@@ -37,6 +39,15 @@ describe("todo tool", () => {
 		const { tool } = setup();
 		expect(tool.name).toBe("todo");
 		expect(tool.executionMode).toBe("sequential");
+	});
+
+	it("hints the agent with a prompt snippet and guidelines", () => {
+		const { tool } = setup();
+		expect(tool.promptSnippet?.trim()).toBeTruthy();
+		expect(tool.promptGuidelines?.length).toBeGreaterThan(0);
+		for (const guideline of tool.promptGuidelines ?? []) {
+			expect(guideline.trim()).toBeTruthy();
+		}
 	});
 
 	it("lists an empty list", async () => {

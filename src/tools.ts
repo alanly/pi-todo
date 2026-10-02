@@ -32,6 +32,11 @@ export function registerTodoTool(pi: ExtensionAPI, deps: RegisterTodoToolDeps): 
 		name: "todo",
 		label: "Todo",
 		description: "Manage a todo list. Actions: list, add (text), toggle (id), clear",
+		promptSnippet: "Manage a todo list to plan and track multi-step work",
+		promptGuidelines: [
+			"Use the `todo` tool to plan multi-step work: add items before you start, then toggle each one done as you finish it.",
+			"Keep the list current as the work evolves by adding newly discovered steps and marking completed ones done, so progress stays visible to the user.",
+		],
 		executionMode: "sequential",
 		parameters: TodoParams,
 
