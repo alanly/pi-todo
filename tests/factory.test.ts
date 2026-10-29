@@ -83,7 +83,7 @@ describe("status line integration", () => {
 			nextId: 4,
 		};
 		await handlerFor(events, "tool_result")({ toolName: "todo", details }, ctx);
-		expect(ctx.status.at(-1)).toEqual(["todo", "☑ 1/3"]);
+		expect(ctx.status.at(-1)).toEqual(["todo", "📝 1/3"]);
 	});
 
 	it("hides the status line once everything is complete", async () => {

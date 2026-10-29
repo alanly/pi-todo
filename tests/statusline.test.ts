@@ -14,9 +14,9 @@ describe("formatTodoStatus", () => {
 	});
 
 	it("shows completed over total while work remains", () => {
-		expect(formatTodoStatus(0, 1, identity)).toBe("☑ 0/1");
-		expect(formatTodoStatus(3, 7, identity)).toBe("☑ 3/7");
-		expect(formatTodoStatus(6, 7, identity)).toBe("☑ 6/7");
+		expect(formatTodoStatus(0, 1, identity)).toBe("📝 0/1");
+		expect(formatTodoStatus(3, 7, identity)).toBe("📝 3/7");
+		expect(formatTodoStatus(6, 7, identity)).toBe("📝 6/7");
 	});
 
 	it("colors the glyph and count as success, the total as dim", () => {
@@ -27,7 +27,7 @@ describe("formatTodoStatus", () => {
 		};
 		formatTodoStatus(3, 7, fg);
 		expect(seen).toEqual([
-			["success", "☑"],
+			["success", "📝"],
 			["success", "3"],
 			["dim", "/7"],
 		]);
