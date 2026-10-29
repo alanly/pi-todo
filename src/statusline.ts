@@ -1,5 +1,5 @@
 /**
- * Footer status line: `☑ done/total`.
+ * Footer status line: `📝 done/total`.
  *
  * It appears only while the list is non-empty AND unfinished, so
  * `setStatus(key, undefined)` clears it the moment everything is done
@@ -20,7 +20,7 @@ export type StatusFg = (color: "success" | "dim", text: string) => string;
  */
 export function formatTodoStatus(done: number, total: number, fg: StatusFg): string | undefined {
 	if (total <= 0 || done >= total) return undefined;
-	return `${fg("success", "☑")} ${fg("success", String(done))}${fg("dim", `/${total}`)}`;
+	return `${fg("success", "📝")} ${fg("success", String(done))}${fg("dim", `/${total}`)}`;
 }
 
 export class TodoStatusLine {

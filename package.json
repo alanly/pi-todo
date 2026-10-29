@@ -1,6 +1,6 @@
 {
   "name": "pi-todo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pi extension: a todo-list tool for the agent, a /todos viewer, and a contextual footer status line.",
   "type": "module",
   "keywords": [

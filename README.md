@@ -21,7 +21,7 @@ added on top.
   ```
   ~/src/github.com/alanly/pi-project
   glm-5.3-flash · high · 12.4k/200k
-  ☑ 3/7
+  📝 3/7
   ```
 
   `3` is the completed count (green), `7` the total (dim). The whole line
